@@ -22,6 +22,6 @@ async fn main() {
     let version_result = nitrapi::version::all().await;
     match version_result {
         Ok(version) => println!("version\n\t{}: {}", version.status, version.message),
-        Err(err) => println!("error pinging: {}", err)
+        Err(err) => println!("error getting version: {}", err)
     }
 }
